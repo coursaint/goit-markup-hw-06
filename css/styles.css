@@ -607,9 +607,8 @@ img {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
   opacity: 100%;
-  /* background-color: rgba(0, 0, 0, 0.2); */
+  background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -626,18 +625,18 @@ img {
 
 }
 
-.is-hidden {
+/* .is-hidden {
   opacity: 0;
   pointer-events: none;
 
-}
+} */
 
-.backdrop.is-hidden .modal {
+/* .backdrop.is-hidden .modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(100%);
-}
+} */
 
 .close-btn {
   position: absolute;
@@ -655,4 +654,50 @@ img {
   position: absolute;
   top: 0px;
   right: 0px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  /* color: var(--four-color-gre); */
+  color: orange;
+  width: 100%;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+.leave-contact {
+  text-align: center;
+}
+
+.inside-text {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: left;
+  letter-spacing: 0.03em;
+}
+
+.inside-textarea {
+
+  letter-spacing: 0.01em;
+  color: orange;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  resize: none;
+}
+
+.inside-textarea:placeholder-shown {
+  color: blue;
+  font-size: 40px;
+
+
 }
