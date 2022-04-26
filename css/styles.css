@@ -842,6 +842,7 @@ img {
   background-color: var(--secondary-color-blu);
   background-image: url(../images/check.svg);
   background-repeat: no-repeat;
+  background-position: center;
   transition-property: border, background-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
