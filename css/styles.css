@@ -535,6 +535,19 @@ img {
   line-height: 125%;
   letter-spacing: 0.03em;
   margin-top: 20px;
+  outline: none;
+}
+
+.newsletter-lbl:placeholder-shown {
+  padding: 15px;
+}
+
+.newsletter-lbl:not(:placeholder-shown) {
+  color: var(--third-color-whi);
+  font-size: 16px;
+  line-height: 125%;
+  letter-spacing: 0.03em;
+  padding: 15px;
 }
 
 
