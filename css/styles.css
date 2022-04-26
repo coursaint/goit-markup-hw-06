@@ -660,13 +660,11 @@ img {
 .label-input {
   display: flex;
   flex-direction: column;
-  margin-bottom: 8px;
   font-size: 12px;
   line-height: 1.16;
   letter-spacing: 0.01em;
   color: var(--four-color-gre);
   width: 100%;
-  border: 1px solid orange;
   margin-top: 10px;
 }
 
@@ -674,6 +672,7 @@ img {
   display: flex;
   flex-direction: column;
   padding: 40px;
+  text-align: left;
 }
 
 .leave-contact {
@@ -686,20 +685,32 @@ img {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  border: 1px solid red;
-
+  /* border: 1px solid red; */
+  transition: fill 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .inside-text {
   font-size: 16px;
   width: 100%;
   padding: 12px 0px 12px 42px;
-  /* border-style: none; */
+  border-style: none;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.inside-text:not(:placeholder-shown) {
-  border-color: #2196f3;
+.inside-text:focus-within,
+.inside-text:focus-visible,
+.inside-textarea:focus-within,
+.inside-textarea:focus-visible {
+  border: 1px solid var(--secondary-color-blu)
 }
+
+.inside-text:focus-within+.label-icon {
+  fill: red;
+}
+
 
 .inside-textarea {
   letter-spacing: 0.01em;
@@ -707,6 +718,11 @@ img {
   padding: 12px 16px;
   resize: none;
   width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 1500ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 .inside-textarea::placeholder {
@@ -722,35 +738,53 @@ img {
   top: auto;
   left: 0;
   color: currentColor;
-  border: 1px solid green;
   margin: 0 12px;
-
+  fill: var(--main-color-bla);
+  transition: fill 1500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox-input:checked+.label-statement::before {
-  background-color: var(--secondary-color-blu);
-  border-style: none;
-}
-
-.checkbox-input {
-  opacity: 0;
-}
-
-.label-statement {
-  display: flex;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  cursor: pointer;
-  border: 1px solid violet;
+.label-box:focus-within .label-icon {
+  fill: var(--secondary-color-blu)
 }
 
 .label-statement::before {
   content: "";
   width: 16px;
   height: 16px;
-  display: block;
   border: 1px solid black;
+  position: absolute;
+  text-align: right;
+  left: 14px;
+  bottom: 4px;
 }
+
+.checkbox-input:checked+.label-statement::before {
+  border-style: none;
+  background-image: url(../images/check.svg);
+  background-repeat: no-repeat;
+
+
+}
+
+.checkbox-input {
+  opacity: 0;
+  position: absolute;
+}
+
+.label-statement {
+  display: flex;
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  padding-left: 37px;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 171%;
+
+
+}
+
+
 
 .send-button {
   font-weight: 700;
