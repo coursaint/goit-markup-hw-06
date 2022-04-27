@@ -780,10 +780,8 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.inside-text:focus-within,
-.inside-text:focus-visible,
-.inside-textarea:focus-within,
-.inside-textarea:focus-visible {
+.inside-text:focus,
+.inside-textarea:focus {
   border: 1px solid var(--secondary-color-blu)
 }
 
